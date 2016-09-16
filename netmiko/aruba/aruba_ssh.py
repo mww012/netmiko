@@ -16,7 +16,5 @@ class ArubaSSH(CiscoSSHConnection):
 
         Aruba uses "(<controller name>) (config) #" as config prompt 
         """
-        if not pattern:
-            pattern = self.base_prompt[:16]
         return super(ArubaSSH, self).check_config_mode(check_string=check_string,
                                                        pattern=pattern)
